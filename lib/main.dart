@@ -30,7 +30,9 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Flutter Mapp'),
+      ),
     );
   }
 }
