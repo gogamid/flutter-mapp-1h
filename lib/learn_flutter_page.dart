@@ -23,6 +23,10 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
         ),
         body: Column(children: [
           Image.asset('images/Google-Flutter-logo.png'),
+          const Divider(
+            color: Colors.lightGreen,
+            thickness: 5,
+          ),
         ]));
   }
 }
