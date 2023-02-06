@@ -8,6 +8,7 @@ class LearnFlutterPage extends StatefulWidget {
 }
 
 class _LearnFlutterPageState extends State<LearnFlutterPage> {
+  bool isSwitched = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,6 +85,15 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
               ],
           ),
            ),
+          //switch widget
+          Switch(
+            value: isSwitched,
+            onChanged: (value) {
+              setState(() {
+                isSwitched = value;
+              });
+            },
+          ),
         ]));
   }
 }
