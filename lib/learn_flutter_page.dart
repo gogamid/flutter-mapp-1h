@@ -33,7 +33,8 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           Container(
             margin: const EdgeInsets.all(10.0),
             padding: const EdgeInsets.all(10.0),
-            width: double.infinity, //takes all the width
+            width: double.infinity,
+            //takes all the width
             color: Colors.blueGrey,
             child: const Center(
               child: Text(
@@ -44,6 +45,31 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
                   )),
             ),
           ),
+          TextButton(
+            onPressed: () {
+              debugPrint('Text Button is clicked');
+            },
+            child: const Text('Text Button'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              debugPrint('Elevated Button is clicked');
+            },
+            child: const Text('Elevated Button'),
+          ),
+          OutlinedButton(
+            onPressed: () {
+              debugPrint('Outlined Button is clicked');
+            },
+            child: const Text('Outlined Button'),
+          ),
+          IconButton(
+            onPressed: () {
+              debugPrint('Icon Button is clicked');
+            },
+            icon: const Icon(Icons.add),
+          ),
+
         ]));
   }
 }
