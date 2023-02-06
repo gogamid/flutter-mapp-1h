@@ -33,12 +33,14 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           Container(
             width: double.infinity, //takes all the width
             color: Colors.blueGrey,
-            child: const Text(
-                'Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                )),
+            child: const Center(
+              child: Text(
+                  'Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  )),
+            ),
           ),
         ]));
   }
