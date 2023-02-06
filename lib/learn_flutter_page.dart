@@ -23,10 +23,17 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
         ),
         body: Column(children: [
           Image.asset('images/Google-Flutter-logo.png'),
-          const SizedBox(height: 30,), //just box to take space
+          const SizedBox(
+            height: 30,
+          ), //just box to take space
           const Divider(
             color: Colors.lightGreen,
             thickness: 5,
+          ),
+          Container(
+            color: Colors.blueGrey,
+            child: const Text(
+                'Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.'),
           ),
         ]));
   }
