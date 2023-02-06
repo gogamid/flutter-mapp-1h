@@ -69,7 +69,15 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             },
             icon: const Icon(Icons.add),
           ),
-
+          //row widget with icon text and icon
+           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: const [
+              Icon(Icons.local_fire_department),
+              Text('Row Widget'),
+              Icon(Icons.local_fire_department),
+            ],
+          ),
         ]));
   }
 }
