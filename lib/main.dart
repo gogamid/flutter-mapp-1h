@@ -32,7 +32,9 @@ class _RootPageState extends State<RootPage> {
         title: const Text('Flutter Mapp'),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          debugPrint('Floating Button is clicked');
+        },
         child: const Icon(Icons.add),
       ),
     );
