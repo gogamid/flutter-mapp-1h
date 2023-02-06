@@ -10,6 +10,7 @@ class LearnFlutterPage extends StatefulWidget {
 class _LearnFlutterPageState extends State<LearnFlutterPage> {
   bool isSwitched = false;
   bool isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,96 +24,99 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             },
           ),
         ),
-        body: Column(children: [
-          Image.asset('images/Google-Flutter-logo.png'),
-          const SizedBox(
-            height: 30,
-          ), //just box to take space
-          const Divider(
-            color: Colors.lightGreen,
-            thickness: 5,
-          ),
-          Container(
-            margin: const EdgeInsets.all(10.0),
-            padding: const EdgeInsets.all(10.0),
-            width: double.infinity,
-            //takes all the width
-            color: Colors.blueGrey,
-            child: const Center(
-              child: Text(
-                  'Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                  )),
+        body: SingleChildScrollView(
+          child: Column(children: [
+            Image.asset('images/Google-Flutter-logo.png'),
+            const SizedBox(
+              height: 30,
+            ), //just box to take space
+            const Divider(
+              color: Colors.lightGreen,
+              thickness: 5,
             ),
-          ),
-          TextButton(
-            onPressed: () {
-              debugPrint('Text Button is clicked');
-            },
-            child: const Text('Text Button'),
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: isSwitched ? Colors.blue : Colors.red,
+            Container(
+              margin: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
+              width: double.infinity,
+              //takes all the width
+              color: Colors.blueGrey,
+              child: const Center(
+                child: Text(
+                    'Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    )),
+              ),
             ),
-            onPressed: () {
-              debugPrint('Elevated Button is clicked');
-            },
-            child: const Text('Elevated Button'),
-          ),
-          OutlinedButton(
-            style: OutlinedButton.styleFrom(
-             backgroundColor: isChecked ? Colors.blue : Colors.red,
+            TextButton(
+              onPressed: () {
+                debugPrint('Text Button is clicked');
+              },
+              child: const Text('Text Button'),
             ),
-            onPressed: () {
-              debugPrint('Outlined Button is clicked');
-            },
-            child: const Text('Outlined Button'),
-          ),
-          IconButton(
-            onPressed: () {
-              debugPrint('Icon Button is clicked');
-            },
-            icon: const Icon(Icons.add),
-          ),
-          //row widget with icon text and icon
-           GestureDetector(
-             behavior: HitTestBehavior.opaque,//to make the whole row clickable
-             onTap: () {
-               debugPrint('Row Widget is clicked');
-             },
-             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
-                Icon(Icons.local_fire_department),
-                Text('Row Widget'),
-                Icon(Icons.local_fire_department),
-              ],
-          ),
-           ),
-          //switch widget
-          Switch(
-            value: isSwitched,
-            onChanged: (value) {
-              setState(() {
-                isSwitched = value;
-              });
-            },
-          ),
-          //checkbox widget
-          Checkbox(
-            value: isChecked,
-            onChanged: (value) {
-              setState(() {
-                isChecked = value!;
-              });
-            },
-          ),
-          //image from network
-          Image.network(
-              'https://storage.googleapis.com/cms-storage-bucket/images/Flutter_3_3.width-635.png'),
-        ]));
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: isSwitched ? Colors.blue : Colors.red,
+              ),
+              onPressed: () {
+                debugPrint('Elevated Button is clicked');
+              },
+              child: const Text('Elevated Button'),
+            ),
+            OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                backgroundColor: isChecked ? Colors.blue : Colors.red,
+              ),
+              onPressed: () {
+                debugPrint('Outlined Button is clicked');
+              },
+              child: const Text('Outlined Button'),
+            ),
+            IconButton(
+              onPressed: () {
+                debugPrint('Icon Button is clicked');
+              },
+              icon: const Icon(Icons.add),
+            ),
+            //row widget with icon text and icon
+            GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              //to make the whole row clickable
+              onTap: () {
+                debugPrint('Row Widget is clicked');
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  Icon(Icons.local_fire_department),
+                  Text('Row Widget'),
+                  Icon(Icons.local_fire_department),
+                ],
+              ),
+            ),
+            //switch widget
+            Switch(
+              value: isSwitched,
+              onChanged: (value) {
+                setState(() {
+                  isSwitched = value;
+                });
+              },
+            ),
+            //checkbox widget
+            Checkbox(
+              value: isChecked,
+              onChanged: (value) {
+                setState(() {
+                  isChecked = value!;
+                });
+              },
+            ),
+            //image from network
+            Image.network(
+                'https://storage.googleapis.com/cms-storage-bucket/images/Flutter_3_3.width-635.png'),
+          ]),
+        ));
   }
 }
