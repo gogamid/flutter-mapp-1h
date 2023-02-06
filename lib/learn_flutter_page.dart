@@ -23,6 +23,7 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
         ),
         body: Column(children: [
           Image.asset('images/Google-Flutter-logo.png'),
+          const SizedBox(height: 30,), //just box to take space
           const Divider(
             color: Colors.lightGreen,
             thickness: 5,
