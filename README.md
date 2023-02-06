@@ -1,16 +1,11 @@
 # flutter_mapp_1h_project
 
-A new Flutter project.
+Flutter Practice: Stateless and Stateful Widgets, Scaffold, MaterialApp, AppBar, ThemeData, FloatingActionButton, debugPrint, BottomNavigation, useState, Navigator, push, pop, Center, Column, Row, Divider, SizedBox, Container, Text, TextStyle, margin, padding, Button Types, Switch, Checkbox, Image from asset and network, SingleScrollablePage, Action Buttons, ListView and ListTile
 
-## Getting Started
+Reference Video:
+Flutter Mapp 1h Tutorial 
 
-This project is a starting point for a Flutter application.
+Demo:
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
