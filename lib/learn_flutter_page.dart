@@ -9,6 +9,7 @@ class LearnFlutterPage extends StatefulWidget {
 
 class _LearnFlutterPageState extends State<LearnFlutterPage> {
   bool isSwitched = false;
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,6 +63,9 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             child: const Text('Elevated Button'),
           ),
           OutlinedButton(
+            style: OutlinedButton.styleFrom(
+             backgroundColor: isChecked ? Colors.blue : Colors.red,
+            ),
             onPressed: () {
               debugPrint('Outlined Button is clicked');
             },
@@ -94,6 +98,15 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             onChanged: (value) {
               setState(() {
                 isSwitched = value;
+              });
+            },
+          ),
+          //checkbox widget
+          Checkbox(
+            value: isChecked,
+            onChanged: (value) {
+              setState(() {
+                isChecked = value!;
               });
             },
           ),
