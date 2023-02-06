@@ -110,6 +110,9 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
               });
             },
           ),
+          //image from network
+          Image.network(
+              'https://storage.googleapis.com/cms-storage-bucket/images/Flutter_3_3.width-635.png'),
         ]));
   }
 }
