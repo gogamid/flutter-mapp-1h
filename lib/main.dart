@@ -29,9 +29,10 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
+  bool isGrid = true;
   List<Widget> pages = const <Widget>[
     HomePage(),
-    GalleryPage(),
+    GalleryPage(isGrid: true),
     ProfilePage(),
   ];
 
@@ -40,6 +41,23 @@ class _RootPageState extends State<RootPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Mapp'),
+        actions: currentPage == 1
+            ? [
+                IconButton(
+                  icon: const Icon(Icons.list),
+                  onPressed: () {
+                    setState(() {
+                      isGrid = !isGrid;
+                      pages = <Widget>[
+                        const HomePage(),
+                        GalleryPage(isGrid: isGrid),
+                        const ProfilePage(),
+                      ];
+                    });
+                  },
+                ),
+              ]
+            : [],
       ),
       body: pages[currentPage],
       floatingActionButton: FloatingActionButton(
