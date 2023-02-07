@@ -98,7 +98,7 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
                   Icon(Icons.local_fire_department),
-                  Text('Row Widget'),
+                  Expanded(child: Text('Row Widget', textAlign: TextAlign.center)),
                   Icon(Icons.local_fire_department),
                 ],
               ),
@@ -124,6 +124,12 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             //image from network
             Image.network(
                 'https://storage.googleapis.com/cms-storage-bucket/images/Flutter_3_3.width-635.png'),
+            const TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Enter your name',
+              ),
+            ),
           ]),
         ));
   }
