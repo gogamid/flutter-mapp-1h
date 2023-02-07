@@ -32,33 +32,13 @@ class _RootPageState extends State<RootPage> {
   bool isGrid = true;
   List<Widget> pages = const <Widget>[
     HomePage(),
-    GalleryPage(isGrid: true),
+    GalleryPage(),
     ProfilePage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter Mapp'),
-        actions: currentPage == 1
-            ? [
-                IconButton(
-                  icon: const Icon(Icons.list),
-                  onPressed: () {
-                    setState(() {
-                      isGrid = !isGrid;
-                      pages = <Widget>[
-                        const HomePage(),
-                        GalleryPage(isGrid: isGrid),
-                        const ProfilePage(),
-                      ];
-                    });
-                  },
-                ),
-              ]
-            : [],
-      ),
       body: pages[currentPage],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
