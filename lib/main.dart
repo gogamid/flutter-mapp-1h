@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mapp_1h_project/gallery_page.dart';
 import 'package:flutter_mapp_1h_project/home_page.dart';
 import 'package:flutter_mapp_1h_project/profile_page.dart';
 
@@ -30,6 +31,7 @@ class _RootPageState extends State<RootPage> {
   int currentPage = 0;
   List<Widget> pages = const <Widget>[
     HomePage(),
+    GalleryPage(),
     ProfilePage(),
   ];
 
@@ -49,6 +51,7 @@ class _RootPageState extends State<RootPage> {
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.photo), label: 'Gallery'),
           NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
         ],
         onDestinationSelected: (int index) {
