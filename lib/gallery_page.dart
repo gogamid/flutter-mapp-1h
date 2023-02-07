@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mapp_1h_project/gallery_details.dart';
 
 class GalleryPage extends StatefulWidget {
   const GalleryPage({Key? key}) : super(key: key);
@@ -33,9 +34,21 @@ class _GalleryPageState extends State<GalleryPage> {
           ),
           itemCount: images.length,
           itemBuilder: (context, index) {
-            return Image(
-              image: images[index],
-              fit: BoxFit.cover,
+            return GestureDetector(
+              onTap: () {
+                debugPrint('Image $index is clicked');
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => GalleryDetails(
+                          image: images[index],
+                        )));
+              },
+              child: Card(
+                margin: const EdgeInsets.all(10),
+                child: Image(
+                  image: images[index],
+                  fit: BoxFit.cover,
+                ),
+              ),
             );
           }),
     );
