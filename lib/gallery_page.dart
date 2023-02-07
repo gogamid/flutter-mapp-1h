@@ -5,6 +5,21 @@ class GalleryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    List<AssetImage> images =
+        List.generate(2045, (index) => AssetImage("images/image$index.jpg"));
+    //list of images
+    return GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+        ),
+        itemCount: images.length,
+        itemBuilder: (context, index) {
+          return Image(
+            image: images[index],
+            fit: BoxFit.cover,
+          );
+        });
   }
 }
